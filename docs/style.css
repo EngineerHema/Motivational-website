@@ -1,0 +1,24 @@
+*{
+    background-color: rgb(36, 29, 29);
+}
+
+h1{
+    font-family: "Sofadi One", system-ui;
+    color: white;
+    text-align: center;
+    margin: 100px 0px;
+}
+
+div{
+    margin: 10% 25%;
+}
+
+#randomImage{
+    border: 1pt dashed whitesmoke;
+}
+
+footer{
+    font-style: italic;
+    text-align: center;
+    color: bisque;
+}

@@ -1,0 +1,69 @@
+<!-- 
+  TODO: Create a motivational post website.
+Style it how ever you like. 
+Look at the goal image for inspiration.
+But it must have the following features:
+1. The main h1 text should be using the Regular Libre Baskerville Font from Google Fonts:
+  https://fonts.google.com/specimen/Libre+Baskerville
+2. The text should be white and background black.
+3. Add your own image into the images folder inside assets. It should have a 5px white border.
+4. The text should be center aligned.
+5. Create a div to contain the h1, p and img elements. Adjust the margins so that the image and text are centered on the page. 
+  Hint: You horizontally center a div by giving it a width of 50% and a margin-left of 25%.
+  Hint: Set the image to have a width of 100% so it fills the div. 
+6. Read about the text-transform property on MDN docs to make the h1 uppercase with CSS.
+  https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motivation</title>
+</head>
+<body>
+  
+  <div>
+    <h1>
+      "Life is a journey, not a race—embrace each moment and grow through the challenges. The smallest steps can lead to the greatest destinations."
+    </h1>
+    <img id="randomImage" alt="Motivational Image" width="100%" height="100%" draggable="true">
+
+    <script>
+        // Array of image paths
+        const imagePaths = [
+            'assets\\images\\pexels-brett-sayles-2853548.jpg',
+            'assets\\images\\pexels-cottonbro-3831847.jpg',
+            'assets\\images\\pexels-elly-fairytale-3811074.jpg',
+            'assets\\images\\pexels-geralt-21696.jpg',
+            'assets\\images\\pexels-ihsanaditya-2045600.jpg',
+            'assets\\images\\pexels-leeloothefirst-5238645.jpg',
+            'assets\\images\\pexels-luke-webb-1336561-2794212.jpg',
+            'assets\\images\\pexels-mdsnmdsnmdsn-2821823.jpg',
+            'assets\\images\\pexels-olenkabohovyk-3806690.jpg',
+            'assets\\images\\pexels-prateekkatyal-2740956.jpg',
+            'assets\\images\\pexels-thngocbich-760721.jpg'
+        ];
+
+        // Function to select a random image on page load
+        function selectRandomImage() {
+            const selectedImage = imagePaths[Math.floor(Math.random() * imagePaths.length)];
+            document.getElementById('randomImage').src = selectedImage;
+        }
+
+        // Call the function as soon as the page loads
+        window.onload = selectRandomImage;
+    </script>
+  </div>
+
+  <footer>
+    Refresh for more motivational pictures
+  </footer>
+  
+</body>
+</html>
